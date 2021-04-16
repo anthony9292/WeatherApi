@@ -6,81 +6,65 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-<title>Weather Application</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
 <link rel="stylesheet" href="./assets/style.css">
+<title>Weather Application</title>
+<script src="https://kit.fontawesome.com/70fcd40144.js" crossorigin="anonymous"></script>
+
+
 </head>
 <body> 
-<nav class="navbar navbar-dark bg-primary">
-    <span class="navbar-brand mb-0 h1 w-100 text-center">Weather Home</span>
-</nav> 
-<div class="container"> 
-<div class="row"> 
-<div class="col-4 bg-info">
-    <p class="search-header my-1">Search City</p>
-    <div class="input-group mb-2"> 
-        <input id="city-input" type="text" class="form-control" placeholder="Enter A City " aria-label="Enter A City">
-        <div class="input-group-append"> 
-            <button class="btn btn-primary" type="button" id="search button">
-                <i class="fas fa-search"></i>
-            </button>
-        </div>
-    </div>
-    <button class="btn btn-primary mb-3" type="button" id="clear-history">Clear History</button>
-    <form id="history"></form>
-
-</div>
-<div class="col-8">
-    <div class="row mr-0">
-        <div class="col-12 border border-dark m-3 rounded">
-            <div class="row">
-                <div class="col-12">
-                <span id="city-name" class="city-name alig-middle"></span>
-                <img id="current-pic" src="placeholder" alt="">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <p id="temperature"></p>
-                </div>
-            </div>
-            <div class="row">
-             <div class="col-12">
-                 <p id="temperature"></p>
-             </div>
-            </div>
-            <div class="row">
-                <div class="col-12"> 
-                    <p id="wind-speed" ></p>             
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 d-flex">
-                    <p id="UV-index"></p>
-                </div>
-            </div>
+<div class="p-4 bg-primary text-light">
+    <div class="container text-center">
+        <h1>Weather Dashboard</h1>
     </div>
 </div>
-<div class="row">
-    <div class="col-12">
-        <h3>5-Day Weather Forecast</h3>
+<div class="container-fluid"> 
+    <div class="row">
+        <aside id="sideMenu" class="sidebar col-3">
+            <h3>Enter a City</h3>
+            <form id="searchForm" class="form-inline"> 
+                <input type="text" id="searchTermEntry" class="form-controle" placeholder="City name"> &nbsp;
+                <button type="button" class="btn btn-primary" id="searchButton"><i class="fas fa-search"></i></button>
+            </form>
+            <hr>
+            <div class="card"> 
+                <h4 class="card-header">Recent Locations</h4> 
+                <div id="resultList" class="list-group-flush">
+                </div>
+            </div>
+        </aside>
+        <main class="dashboard col-9"> 
+         <div class="row"> 
+            <section id="currentWeatherPane" class="card m-5 col-12">
+            <div class="card-body">
+                <h2 id="currentWeatherHeading" class="card-title">
+                    <span id="currentWeatherCity">City Name:</span> &nbsp; <span
+                        id="currentWeatherDate"></span> &nbsp; <img id="currentWeatherIcon"></img>
+                </h2>
+                <p id="currentTempLine">Temperature: <span id="currentTempSpan"></span></p>
+                <p id="currentHumidityLine">Humidity: <span id="currentHumiditySpan"></span></p>
+                <p id="currentWindLine">Wind Speed: <span id="currentWindSpan"></span></p>
+                <p id="currentUVLine">UV Index: <span id="currentUVSpan"></span></p>
+            </div>
+            </section>
+         </div>
+         <div  class="row"> 
+             <section class="card m-5 col-12"> 
+                 <div class="card-body"> 
+                    <h3 class="card-tittle">5-day Forecast</h3>
+                    <div class="row" id="fiveDayCardsRow">
+
+                    </div>
+                 </div>
+             </section>
+         </div>
+        </main>
     </div>
 </div>
-<div class="row">
-    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-</div>
- </div>
-</div>
-</div>
 
-
-
-
-
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script src="./assets/script.js"></script>
 
 </body>
