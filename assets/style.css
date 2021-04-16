@@ -1,28 +1,16 @@
-*{ 
- margin:10px; 
- padding: 0px;
- box-sizing: border-box;
- text-align: center;
+.navbar-brand {
+    font-size: 36px;
 }
 
-body{ 
-    font-family: 'Times New Roman', Times, serif;
-    
-}
-
-input{ 
-
- text-align: center;
-}
-
-input[type="text"]{ 
-
-    height:50px; 
-    width: 600px; 
-    background: white; 
-    font-family:'Courier New', Courier, monospace ;
+.search-header {
+    font-size: 24px;
     font-weight: bold;
-    font-size: 20px;
-    border:none; 
-    border-radius:2px;
+}
+
+.city-name {
+    font-size: 30px;
+}
+
+.forecast-date {
+    font-size: 18px;
 }
