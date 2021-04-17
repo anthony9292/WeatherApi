@@ -1,16 +1,7 @@
-.navbar-brand {
-    font-size: 36px;
+li {
+    border-bottom: 1px solid lightgray;
+    text-align: left;
+    padding-left: 10px;
 }
 
-.search-header {
-    font-size: 24px;
-    font-weight: bold;
-}
 
-.city-name {
-    font-size: 30px;
-}
-
-.forecast-date {
-    font-size: 18px;
-}
