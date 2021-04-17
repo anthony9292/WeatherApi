@@ -16,12 +16,12 @@
 
 </head>
 <body> 
-<div class="p-4 bg-primary text-light">
+<div class="p-5 bg-primary text-light" id="header">
     <div class="container text-center">
         <h1>Weather Dashboard</h1>
     </div>
 </div>
-<div class="container-fluid"> 
+<div class="container-fluid" id="everything"> 
     <div class="row">
         <aside id="sideMenu" class="sidebar col-3">
             <h3>Enter a City</h3>
@@ -36,9 +36,9 @@
                 </div>
             </div>
         </aside>
-        <main class="dashboard col-9"> 
+        <main class="dashboard col-6"> 
          <div class="row"> 
-            <section id="currentWeatherPane" class="card m-5 col-12">
+            <section id="currentWeatherPane" class="card m-5 col-11">
             <div class="card-body">
                 <h2 id="currentWeatherHeading" class="card-title">
                     <span id="currentWeatherCity">City Name:</span> &nbsp; <span
@@ -52,7 +52,7 @@
             </section>
          </div>
          <div  class="row"> 
-             <section class="card m-5 col-12"> 
+             <section class="card m-5 col-11"> 
                  <div class="card-body"> 
                     <h3 class="card-tittle">5-day Forecast</h3>
                     <div class="row" id="fiveDayCardsRow">
